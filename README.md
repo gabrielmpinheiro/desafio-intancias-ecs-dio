@@ -63,6 +63,7 @@ A arquitetura proposta adota uma abordagem **Serverless** (onde possível) e **G
 
 Esta arquitetura é um exemplo clássico de **Arquitetura de 3 Camadas** (Frontend, Aplicação, Dados) com componentes de escalabilidade.
 
+![Diagrama da Arquitetura AWS para o Cadastro Nacional de Animais de Estimação](b-desafio-instancias-ecs-dio.png)
 
 
 ### Detalhamento do Fluxo
@@ -73,8 +74,3 @@ Esta arquitetura é um exemplo clássico de **Arquitetura de 3 Camadas** (Fronte
 4.  **Alerta Assíncrono:** Ao registrar a perda, a aplicação envia uma mensagem para o **SQS** (desacoplando a operação).
 5.  **Processamento:** A **EC2 Worker Instance** lê a mensagem do SQS, executa a lógica de geolocalização e alerta, e envia a notificação final para o **SNS** (que fará a integração com as redes sociais).
 
----
-
-![Diagrama da Arquitetura AWS para o Cadastro Nacional de Animais de Estimação](b-desafio-instancias-ecs-dio.png)
-
-Esta estrutura atende perfeitamente ao requisito de usar EC2 de forma otimizada, é **altamente disponível** (Multi-AZ, ALB, ASG) e possui estratégias claras de **otimização de custos**.
