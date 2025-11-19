@@ -75,4 +75,6 @@ Esta arquitetura é um exemplo clássico de **Arquitetura de 3 Camadas** (Fronte
 
 ---
 
+![Diagrama da Arquitetura AWS para o Cadastro Nacional de Animais de Estimação](b-desafio-instancias-ecs-dio.png)
+
 Esta estrutura atende perfeitamente ao requisito de usar EC2 de forma otimizada, é **altamente disponível** (Multi-AZ, ALB, ASG) e possui estratégias claras de **otimização de custos**.
